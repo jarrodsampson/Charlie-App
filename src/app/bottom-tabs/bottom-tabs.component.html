@@ -1,0 +1,8 @@
+<div class="bottom-tabs-container">
+  <div *ngFor="let tab of bottomTabs" class="tab">
+    <div class="icon">
+      <img src="assets/icons/{{ tab.icon }}.png" alt="{{ tab.label }}" />
+    </div>
+    <div class="label">{{ tab.label }}</div>
+  </div>
+</div>

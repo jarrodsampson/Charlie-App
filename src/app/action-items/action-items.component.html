@@ -1,0 +1,11 @@
+<div class="action-items-container">
+  <div *ngFor="let actionItem of actionItems" class="action-item">
+    <div class="icon">
+      <img
+        src="assets/icons/{{ actionItem.icon }}.png"
+        alt="{{ actionItem.label }}"
+      />
+    </div>
+    <div class="label">{{ actionItem.label }}</div>
+  </div>
+</div>

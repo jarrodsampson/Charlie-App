@@ -1,0 +1,69 @@
+@import "../../styles/colors";
+@import "../../styles/media";
+@import "../../styles/mixins";
+
+.credit-cards-container {
+  display: flex;
+  overflow-x: auto;
+  margin: 0 0 16px 0;
+  padding-top: 20px;
+
+  @media (min-width: $xlarge) {
+    justify-content: center;
+  }
+
+  .credit-card {
+    position: relative;
+    flex: 0 0 45%; /* 2 cards in a row */
+    border: 1px solid $border-color;
+    margin: 10px;
+    text-align: center;
+    min-width: 288px;
+    max-width: 288px;
+    height: 180px;
+    border-radius: 16px;
+    background-color: $white-color;
+
+    @include media($small) {
+      height: 230px;
+      max-width: 354px;
+    }
+
+    .card-type {
+      font-size: 18px;
+      position: absolute;
+      top: 115px;
+      right: 16px;
+
+      @include media($small) {
+        top: 165px;
+      }
+    }
+
+    .visa-card {
+      width: 84px;
+    }
+
+    .card-number {
+      font-size: 16px;
+      position: absolute;
+      top: 133px;
+      left: 16px;
+      font-family: "Roboto";
+      color: $white-color;
+
+      @include media($small) {
+        top: 183px;
+      }
+    }
+
+    .card-amount {
+      position: absolute;
+      top: 24px;
+      left: 16px;
+      font-size: 24px;
+      font-family: "Roboto";
+      color: $white-color;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@import "./media.scss";
+
+// Media query mixins
+@mixin media($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}

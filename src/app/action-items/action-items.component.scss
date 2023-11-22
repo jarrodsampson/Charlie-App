@@ -1,0 +1,40 @@
+@import "../../styles/colors";
+@import "../../styles/media";
+@import "../../styles/mixins";
+
+.action-items-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 32px 0 16px 0;
+
+  @include media($small) {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  .action-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .icon {
+    font-size: 24px;
+    background: $primary-color;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: $primary-color;
+  }
+
+  .label {
+    margin-top: 8px;
+    font-size: 16px;
+    color: $primary-color;
+    font-family: "Roboto";
+  }
+}

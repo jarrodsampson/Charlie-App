@@ -1,0 +1,23 @@
+<div class="credit-cards-container">
+  <div
+    *ngFor="let creditCard of creditCardEntries; let i = index"
+    class="credit-card"
+    [style.background]="containerGradients[creditCard.cardType]"
+  >
+    <div class="card-amount">${{ creditCard.amount.toFixed(2) }}</div>
+    <div *ngIf="creditCard.cardType === 'MasterCard'" class="card-type">
+      <img src="assets/images/MasterCard.png" alt="{{ creditCard.cardType }}" />
+    </div>
+    <div *ngIf="creditCard.cardType === 'Visa'" class="card-type">
+      <img
+        class="visa-card"
+        src="assets/images/Visa.png"
+        alt="{{ creditCard.cardType }}"
+      />
+    </div>
+    <div class="card-number">
+      &middot;&middot;&middot;&middot;
+      {{ getLastFourDigits(creditCard.cardNumber) }}
+    </div>
+  </div>
+</div>

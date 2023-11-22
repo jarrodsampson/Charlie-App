@@ -1,0 +1,31 @@
+@import "../../styles/colors";
+
+.bottom-tabs-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: $white-color;
+  border-top: 1px solid $border-color;
+  display: flex;
+  height: 65px;
+
+  .tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .icon {
+    font-size: 24px;
+  }
+
+  .label {
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0px;
+    text-align: center;
+  }
+}
